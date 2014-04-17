@@ -39,12 +39,11 @@ module Feedjira
     end
 
     def sanitize!
-      # %w[title author summary content image].each do |name|
-      #   if self.respond_to?(name) && self.send(name).respond_to?(:sanitize!)
-      #     self.send(name).send :sanitize!
-      #   end
-      # end
-      puts "Apple"
+      %w[title author summary content image].each do |name|
+        if self.respond_to?(name) && self.send(name).respond_to?(:sanitize!)
+          self.send(name).send :sanitize!
+        end
+      end
     end
 
     alias_method :last_modified, :published
