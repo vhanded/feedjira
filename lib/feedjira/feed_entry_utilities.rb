@@ -42,6 +42,7 @@ module Feedjira
       #     self.send(name).send :sanitize!
       #   end
       # end
+      puts "Apple"
     end
 
     alias_method :last_modified, :published
