@@ -2,6 +2,7 @@ module Feedjira
   class Feed
     USER_AGENT = 'feedjira http://feedjira.com'
 
+    puts "FINALLY"
     # Passes raw XML and callbacks to a parser.
     # === Parameters
     # [parser<Object>] The parser to pass arguments to - must respond to
@@ -234,7 +235,7 @@ module Feedjira
         add_url_to_multi(multi, url, url_queue, responses, options)
       end
 
-      multi.perform
+      # multi.perform
       return urls.is_a?(String) ? responses.values.first : responses
     end
 
