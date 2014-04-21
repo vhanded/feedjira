@@ -234,7 +234,6 @@ module Feedjira
         add_url_to_multi(multi, url, url_queue, responses, options)
       end
 
-      puts "LOL"
       multi.perform
       return urls.is_a?(String) ? responses.values.first : responses
     end
