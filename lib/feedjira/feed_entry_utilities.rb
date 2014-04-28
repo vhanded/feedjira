@@ -1,8 +1,6 @@
 module Feedjira
   module FeedEntryUtilities
 
-    puts "Pineapple"
-
     include Enumerable
 
     def published
